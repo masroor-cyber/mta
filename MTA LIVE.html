@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MTA Channel Live</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: gradientMove 30s ease infinite;
+      direction: ltr;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffda44;
+      text-shadow: 2px 2px #000;
+      border-bottom: 3px solid #ffda44;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #ffda44;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      background: #ffda44;
+      color: #111;
+      border-radius: 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #ffda44;
+      margin-bottom: 20px;
+      border-left: 5px solid #ffda44;
+      padding-left: 15px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 25px rgba(255, 255, 102, 0.6);
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .video-card {
+      background: rgba(0,0,0,0.6);
+      width: 360px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(255, 255, 0, 0.4);
+    }
+
+    .video-card h3 {
+      background: #ffda44;
+      color: #111;
+      text-align: center;
+      padding: 12px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    #schedule ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    #schedule ul li {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(255, 255, 102, 0.3);
+      font-size: 1.1rem;
+    }
+
+    #donate button {
+      background: #ffda44;
+      color: #111;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s ease;
+    }
+
+    #donate button:hover {
+      background: #ffe066;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000000cc;
+      color: #ffda44;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>MTA Channel Live</header>
+
+<nav>
+  <a href="#live">Live</a>
+  <a href="#programs">Programs</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#donate">Donate</a>
+  <a href="#audio">Audio</a>
+</nav>
+
+<div class="container" id="live">
+  <h2>Live Broadcast</h2>
+  <iframe src="https://www.youtube.com/embed/cu-0mGA8x50" allowfullscreen></iframe>
+</div>
+
+<div class="container" id="programs">
+  <h2>Previous Programs</h2>
+  <div class="video-container">
+    <div class="video-card">
+      <h3>Annual Gathering Qadian 2024</h3>
+      <iframe src="https://www.youtube.com/embed/YVd2XeqpEuk" allowfullscreen></iframe>
+    </div>
+    <div class="video-card">
+      <h3>Annual Gathering Qadian 2023</h3>
+      <iframe src="https://www.youtube.com/embed/NmnPuKia4sg" allowfullscreen></iframe>
+    </div>
+    <div class="video-card">
+      <h3>Annual Gathering Qadian 2022</h3>
+      <iframe src="https://www.youtube.com/embed/LebQGGtiBTE" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="schedule">
+  <h2>Program Schedule</h2>
+  <ul>
+    <li>Fajr Live – 5:00 AM</li>
+    <li>Islamic Teachings – 8:00 AM</li>
+    <li>Quran Recitation – 12:00 PM</li>
+    <li>Evening Talk Show – 6:00 PM</li>
+    <li>Night Sermon – 9:00 PM</li>
+  </ul>
+</div>
+
+<div class="container" id="donate">
+  <h2>Support MTA Channel</h2>
+  <form action="https://www.paypal.com/donate" method="post" target="_blank">
+    <input type="hidden" name="business" value="YOUR_PAYPAL_ID">
+    <input type="hidden" name="currency_code" value="USD">
+    <button type="submit">Donate via PayPal</button>
+  </form>
+</div>
+
+<div class="container" id="audio">
+  <h2>Audio Broadcasts Only (English)</h2>
+  <audio controls>
+    <source src="https://stream.radiojar.com/3v3cyxszre0uv" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<footer>
+  &copy; 2025 MTA Channel. All rights reserved.
+</footer>
+
+</body>
+</html>
